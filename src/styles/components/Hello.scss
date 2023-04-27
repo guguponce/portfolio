@@ -1,0 +1,423 @@
+@import "../base/Settings.scss";
+
+#hello-container {
+  width: 100%;
+  min-height: 100svh;
+  height: 100%;
+  @include flex(column, center, center);
+  #hello-box {
+    max-width: 85vw;
+    border-radius: 50%;
+    position: relative;
+
+    @media (min-width: $mobile-width) {
+      max-width: 65vw;
+    }
+    #text-hello-box {
+      min-height: 200px;
+
+      * {
+        margin: 0;
+      }
+      #salute-title {
+        text-align: center;
+        font-family: InterSemibold, Arial, Helvetica, sans-serif;
+        font-size: 4rem;
+        line-height: 3.5rem;
+      }
+      #profession-title {
+        margin-top: 1rem;
+        margin-right: 1rem;
+        text-align: end;
+      }
+    }
+    #image-box {
+      width: 60vw;
+      max-width: 300px;
+    }
+    @media (min-width: $laptop-width) {
+      padding: 6rem;
+      .iconImg {
+        width: 75px;
+        height: 75px;
+        transform: translate(-50%, -50%);
+        filter: grayscale(0.99);
+        position: absolute;
+        opacity: 0;
+        &:nth-child(odd) {
+          transition: opacity 1s ease-in-out;
+        }
+        &:nth-child(even) {
+          transition: opacity 0.8s ease-in-out;
+        }
+        &:nth-child(1) {
+          top: 15%;
+          left: 5%;
+        }
+        &:nth-child(2) {
+          top: 7%;
+          left: 50%;
+        }
+        &:nth-child(4) {
+          top: 15%;
+          right: -5%;
+        }
+        &:nth-child(5) {
+          top: 50%;
+          right: -15%;
+        }
+        &:nth-child(6) {
+          bottom: 10%;
+          right: -5%;
+        }
+        &:nth-child(7) {
+          top: 50%;
+          left: -5%;
+        }
+        &:nth-child(3) {
+          bottom: -2%;
+          left: 50%;
+        }
+        &:nth-child(8) {
+          bottom: 10%;
+          left: 5%;
+        }
+
+        @include backgroundStyle(contain, center);
+      }
+    }
+    @media (min-width: $desktop-width) {
+      padding: 10rem;
+    }
+  }
+}
+
+#skills-about-projects {
+  width: 100vw;
+
+  #knowledge-container {
+    width: 100%;
+    background-color: #0c0824;
+    padding: 1rem 0;
+    @include flex(column, flex-start, center);
+
+    #knowledge-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      & > h2 {
+        width: 90%;
+        font-family: Bailleul-Roman, serif;
+        color: #fefefe;
+        text-align: end;
+        font-size: 3rem;
+        margin: 1rem 0;
+        align-self: center;
+      }
+      #tech-icons {
+        max-width: 500px;
+        @include flex(column, flex-start, center);
+        gap: 2rem;
+        width: 80%;
+        margin: 0 auto;
+        .iconContainer {
+          width: 100%;
+          max-width: 600px;
+          height: 75px;
+          border-radius: 0.25rem;
+          padding: 1rem;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          border: 1px solid hsl(249, 64%, 100%, 0.1);
+          &.inView {
+            &:nth-child(even) {
+              justify-content: flex-end;
+              .techName {
+                right: 100px;
+                opacity: 1;
+              }
+            }
+            &:nth-child(odd) {
+              justify-content: flex-start;
+              .techName {
+                opacity: 1;
+                left: 100px;
+              }
+            }
+          }
+          .iIcon {
+            display: block;
+            border-radius: 0.25rem;
+            width: 75px;
+            height: 100%;
+            background-color: #0c0824;
+            @include backgroundStyle(contain, center);
+          }
+          .techName {
+            color: #fefefe;
+            position: absolute;
+            // transform: translate(-50%, 0);
+            font-size: 2rem;
+            font-family: JUSTSans, Arial, Helvetica, sans-serif;
+            opacity: 0;
+            margin: 1rem 0.25rem;
+            transition: opacity 1s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  #aboutme-projects {
+    width: 100%;
+    margin-top: 2rem;
+    @include flex(column-reverse, flex-start, center);
+    @media (min-width: $mobile-width) {
+    flex-direction: column;
+    }
+    #aboutme-container {
+      #aboutme-box {
+        backdrop-filter: brightness(80%);
+        margin: 0 auto;
+        max-width: 600px;
+        background: transparent;
+        text-align: justify;
+        padding: 1rem 2rem;
+        box-shadow: i 1px 5px 10px 2px #0c0824;
+
+        h2 {
+          padding: 1rem 2rem;
+          margin-bottom: 1rem;
+        }
+        .aboutmeTitle {
+          span {
+            color: #bfa181;
+          }
+          font-family: Bailleul-Roman, serif;
+          padding: 1rem 2rem;
+          font-size: 2rem;
+          color: #fefefe;
+          border: 2px solid;
+          padding: 0;
+          border-image-slice: 1;
+          border-width: 2px;
+          border-top: 0;
+          border-right: 0;
+          border-left: 0;
+          border-image-source: linear-gradient(90deg, #bfa181 50%, #fefefe);
+        }
+
+        .aboutmeParagraph {
+          font-family: Hitmo, sans-serif;
+          margin: 0.25rem auto;
+          letter-spacing: 2px;
+          font-size: 1.25rem;
+          span {
+            color: #bfa181;
+          }
+        }
+        #languages-box {
+          margin-top: 2rem;
+
+          .aboutmeParagraph {
+            font-size: 1.15rem;
+          }
+        }
+      }
+    }
+    #projects-container {
+      width: 100%;
+      margin: 2rem auto 0;
+      @include flex(column, flex-start, center);
+
+      #projects-box {
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+        gap: 2rem;
+        width: 80%;
+        .singleProject {
+          width: clamp(400px, 100%, 600px);
+          min-height: 250px;
+          height: fit-content;
+          margin: 2rem 0;
+          padding: 1rem 0;
+          @include flex(column, flex-start, center);
+          @media (min-width: $mobile-width) {
+            padding: 0;
+            @include flex(row, space-between, flex-start);
+          }
+          border: 1px solid #fefefe;
+          border-radius: 0.25rem;
+          
+          box-shadow: 1px 5px 10px 2px #0c0824;
+          outline: 2px solid #fefefe;
+          @media (hover:hover) {
+            box-shadow: 0;
+              outline: 0;
+            &:hover {
+              box-shadow: 1px 5px 10px 2px #0c0824;
+              transform: scale(1.01);
+              outline: 2px solid #fefefe;
+            }
+            
+          }
+          .projectImg {
+            width: 80%;
+            min-height: 200px;
+            position: relative;
+            @media (min-width: $mobile-width) {
+              min-height: inherit;
+              width: 40%;
+              height: 100%;
+            }
+            @media (hover: hover) {
+              &:hover {
+                .smartphoneContainer {
+                  transform: translate(50%, -50%);
+
+                  right: 10%;
+                }
+              }
+            }
+            a {
+              display: block;
+              height: 100%;
+              min-height: inherit;
+              width: 100%;
+              position: relative;
+              @include flex(column, center, flex-start);
+
+              .laptopContainer {
+                z-index: 10;
+                top: 50%;
+                width: 80%;
+              }
+              .smartphoneContainer {
+                z-index: 5;
+                transform: translate(50%, -50%);
+                top: 50%;
+                right: 20%;
+                width: 50%;
+                transition: right 0.2s ease-out;
+                @media (pointer: coarse) {
+                  transform: translate(50%, -50%);
+
+                  right: -10%;
+                }
+              }
+              .laptopContainer,
+              .smartphoneContainer {
+                position: absolute;
+                transform: translate(0%, -50%);
+                .laptopScreen {
+                  max-width: 100%;
+                  object-fit: contain;
+                  @include backgroundStyle(80%, center);
+                }
+                .smartphoneScreen {
+                  max-width: 100%;
+                  object-fit: contain;
+                  @include backgroundStyle(40%, 55%);
+                }
+              }
+            }
+          }
+          .projectText {
+              width: 100%;
+              min-height: 250px;
+              @include flex(column, flex-start, flex-start);
+              @media (min-width: $mobile-width) {
+              height: 100%;
+              width: 60%;
+            }
+            .projectName {
+              font-family: InterSemibold;
+              font-size: 2rem;
+              margin: 0.5rem 1rem;
+              color: #bfa181;
+            }
+            .projectDescription {
+              font-size: 1rem;
+              margin: 0 1rem 1rem;
+            }
+            .projectLinks {
+              margin-bottom: 1rem;
+              height: 80px;
+              width: 80%;
+              max-width: 250px;
+              @include flex(row, space-between, flex-start);
+              align-self: center;
+              @media (min-width: $mobile-width) {
+                margin-top: auto;
+              }
+              a {
+                color: #fefefe;
+                height: 100%;
+                width: 80px;
+                border-radius: 0.25rem;
+                transition: all 1s ease-out;
+                outline: 2px solid transparent;
+                outline-offset: 2px;
+
+                &:hover,
+                &:active {
+                  outline-color: #fefefe;
+                }
+                &:visited {
+                  color: #fff;
+                }
+                .linkContainer {
+                  height: 100%;
+                  padding: 0.25rem 0;
+                  @include flex(column, space-between, center);
+                  p {
+                    margin: 0;
+                  }
+                  .deployImg,
+                  .codeImg {
+                    width: 70%;
+                    height: 70%;
+                    border-radius: 0.25rem;
+                    display: block;
+                    @include backgroundStyle(80%, center);
+                  }
+                  .codeImg {
+                    width: 60%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: $laptop-width) {
+    width: 100%;
+
+    @include flex(row, space-between, center);
+    #knowledge-container {
+      width: 30%;
+      min-width: 400px;
+    }
+    #aboutme-projects {
+      height: 100%;
+      margin-top: 0;
+      #aboutme-container {
+        #aboutme-box {
+          box-shadow: 1px 5px 10px 2px #0c0824;
+
+          .aboutmeParagraph {
+            font-size: 1.5rem;
+          }
+          #languages-box {
+            .aboutmeParagraph {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

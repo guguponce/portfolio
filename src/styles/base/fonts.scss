@@ -1,0 +1,171 @@
+// FONTS
+@mixin font($font-family, $font-file) {
+    @font-face {
+      font-family: $font-family;
+      src: url($font-file + ".otf");
+      src: url($font-file + ".eot?#iefix") format("embedded-opentype"),
+        url($font-file + ".woff") format("woff"),
+        url($font-file + ".ttf") format("truetype"),
+        url($font-file + ".svg#" + $font-family) format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
+  @font-face {
+    font-family: "Porwerr";
+    src: url("/assets/fonts/PorwerrRegular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Semind";
+    src: url("/assets/fonts/Semind.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Creativo";
+    src: url("/assets/fonts/Creativo-regular.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "TakeCoffee";
+    src: url("/assets/fonts/TakeCoffee.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Bartina";
+    src: url("/assets/fonts/Bartina Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Bartina Bold";
+    src: url("/assets/fonts/Bartina Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Bartina Semibold";
+    src: url("/assets/fonts/Bartina Semibold.ttf");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "JUSTSans";
+    src: url("/assets/fonts/JUST Sans Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Bailleul-Roman";
+    src: url("/assets/fonts/Bailleul-Roman.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Rasfferd";
+    src: url("/assets/fonts/Rasfferd.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "TakeLooks";
+    src: url("/assets/fonts/TakeLooks.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    src: url("/assets/fonts/Inter-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "InterSemiBold";
+    src: url("/assets/fonts/Inter-SemiBold.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "InterMedium";
+    src: url("/assets/fonts/Inter-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "BleepBloop";
+    src: url("/assets/fonts/BleepBloop-FreeVersion.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "HumaneBold";
+    src: url("/assets/fonts/Humane-Bold.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Humane";
+    src: url("/assets/fonts/Humane-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Galhau";
+    src: url("/assets/fonts/Galhau_Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Hitmo";
+    src: url("/assets/fonts/Hitmo2.0-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Mona-Regular";
+    src: url("/assets/fonts/Mona-Sans-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  

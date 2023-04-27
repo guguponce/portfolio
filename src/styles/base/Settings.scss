@@ -1,0 +1,184 @@
+@import "./fonts.scss";
+
+// Scrollbar
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #204183 #0c1e40;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0c1e40;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #204183;
+  border-radius: 16px;
+  border: 0px none #204183;
+}
+
+// Color
+$hh: #84b8c6dc;
+$blue-btn: hsl(210, 20%, 55%);
+
+
+$accomplished: hsl(124, 40%, 70%);
+$low: hsl(55, 92%, 70%);
+$middle: hsla(29, 88%, 63%, 1);
+$high: hsla(5, 62%, 41%, 1);
+
+
+$accomplished-desat: hsl(124, 40%, 80%);
+$low-desat: hsl(56, 90%, 80%);
+$middle-desat: hsla(29, 70%, 70%, 1);
+$high-desat: hsla(5, 49%, 52%, 1);
+
+$asdf: hsl(214, 26%, 58%);
+
+$main-black: #0d0d0d;
+$container-background1: #f7a77850;
+$container-background2: #4a5c50;
+$container-background3: #f7dc7960;
+$container-background4: #235e6f50;
+$container-background5: #315d3550;
+$container-background6: #eeeeee75;
+$green-color-darker: #165b33;
+$green-color-lighter: #34a65f;
+$green-color: #0f8a5f;
+$red-color: #ea4630;
+$red-color-darker: #bb2528;
+$red-color-lighter: #f5624d;
+$yellow-color: #f8b229;
+$yellow-color-darker: #f9bf51;
+$yellow-color-lighter: #facd76;
+$third-color: #fff0db;
+$third-color-darker: #ffefd8;
+$blue-color: #235e6f;
+$a-foot-color: hsl(195, 53%, 79%);
+$a-foot-hover: hsl(195, 53%, 89%);
+$a-foot-active: hsl(195, 53%, 73%);
+$a-foot-visited: hsl(195, 53%, 69%);
+$a-main-color: hsl(210, 53%, 39%);
+$a-main-hover: hsl(210, 53%, 49%);
+$a-main-active: hsl(210, 53%, 33%);
+$a-main-visited: hsl(210, 53%, 29%);
+$orange-alternative: #f6c296;
+$catalog-cart-button: #f7dc79;
+$positive-primary-color: #88a892;
+$positive-secundary-color: #4a5c50;
+$negative-primary-color: #d46c6c;
+$negative-secundary-color: #860909;
+$gradient-orange: linear-gradient(to right, #f7a778, #ffbd96);
+$gradient-blue: linear-gradient(to right, #5098b3, #628fc3);
+$gradient-red: linear-gradient(to right, #ad3b3b, #c15454);
+
+// body
+body {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+// BACKGROUND
+@mixin backgroundStyle($size, $position) {
+  background-position: $position;
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+
+// anchor tags
+a {
+  text-decoration: none;
+  cursor: pointer !important;
+}
+@mixin aTag($color, $visited, $hover, $active) {
+  color: $color;
+  font-weight: 600;
+
+  &:visited {
+    color: $visited;
+  }
+  &:hover {
+    color: $hover;
+  }
+  &:active {
+    color: $active;
+  }
+}
+// input
+input[type="number"] {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+// width
+$desktop-width: 1200px;
+$laptop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 600px;
+$m-mobile-width: 480px;
+$s-mobile-width: 420px;
+$xs-mobile-width: 320px;
+
+//Logo
+$url-logo: url("./images/book-svgrepo-com.svg");
+
+// input
+.input-text-basic {
+  border-radius: 5px;
+  border: 1px solid #a4a4a4;
+  padding: 0.3rem;
+  height: 1.2rem;
+}
+
+// flexbox
+@mixin flex($dir, $just, $align) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+}
+
+// BUTTONS
+button {
+  cursor: pointer;
+}
+
+.button-plain {
+  box-sizing: border-box;
+  align-self: center;
+  margin: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 100 ease-in;
+  &:active {
+    padding: 0.6rem 0.85rem;
+    border: 0.15rem solid #fefefe;
+    border-radius: 10px;
+  }
+
+  background-size: 200% 100%;
+  background-position: 0 0;
+  transition: background-position 0.5s ease 0.2s;
+  &:hover {
+    background-position: 90% 0;
+  }
+}
+
+// #list-posts-main{
+//   *{
+//   }
+// }
